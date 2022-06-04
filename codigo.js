@@ -27,12 +27,14 @@ const card = document.getElementById("cardDinamica");
 const productoL = document.createElement("div");
 
 for (let array of productoA) {
-    productoL.innerHTML += `<div class="g-col-6 g-col-md-4 contendPro">
+    productoL.innerHTML += `<div class="row">
+       <div class="item shadow mb-4 col-sm-4">
             <img class="imgArray" src="${array.img}" >
             <h3> ${ array.nombre } </h3>
             <p>$${array.precio}</p>
             <button class="btn btn-warning rounded-pill text-secondary" >Agregar al carrito</button>
-             </div>`
+             </div>
+        </div>`
 }
 card.appendChild(productoL);
 
