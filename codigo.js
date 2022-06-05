@@ -24,20 +24,24 @@ productoA.push(new Producto("Sabrositos Cachorro", "Alimento Balanceado", 1000, 
 productoA.push(new Producto("Sabrositos Adulto", "Alimento Balanceado", 1000, 0, "./images/sabrositosadulto.png "))
 
 const card = document.getElementById("cardDinamica");
-const productoL = document.createElement("div");
+
 
 for (let array of productoA) {
+    const productoL = document.createElement("div");
     productoL.innerHTML += `
-                   <div class="col-4">
-          <div class="centradoCalif">
-            <img class="imgArray" src="${array.img}" >
+    
+        <div class="card mb-3" style="width: 18rem;">
+          <div class="container card-body  ">
+            <img class="imgArray card-img-top" src="${array.img}" >
             <h3> ${ array.nombre } </h3>
-            <p>$${array.precio}</p>
+            <p class="card-text">$${array.precio}</p>
             <button class="btn btn-warning rounded-pill text-secondary" >Agregar al carrito</button>
-                             </div>
-                 </div>`
+            </div>
+           
+        </div>`
+    card.appendChild(productoL);
 }
-card.appendChild(productoL);
+
 
 let fondoMenu = document.getElementById("menu");
 fondoMenu.style.background = "black";

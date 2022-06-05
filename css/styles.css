@@ -23,8 +23,8 @@ body {
     width: 150px;
 }
 
-.centradoCalif {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 }
