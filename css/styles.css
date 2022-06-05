@@ -23,6 +23,8 @@ body {
     width: 150px;
 }
 
-#tarjetaProd {
-    width: 50%;
+.centradoCalif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
