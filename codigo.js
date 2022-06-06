@@ -1,4 +1,4 @@
-const productoA = []
+const productoA = [];
 class Producto {
     constructor(nombre, categoria, precio, stock, img) {
         this.nombre = nombre;
@@ -12,33 +12,29 @@ class Producto {
 };
 
 productoA.push(new Producto("Walt-Can Adulto", "Alimento Balanceado", 1000, 0, "./images/waltcanadulto.jpg"))
-productoA.push(new Producto("Walt-Can Cachorro", "Alimento Balanceado", 1000, 0, "./images/waltcancachorro.png "))
-productoA.push(new Producto("Jaspe Adulto", "Alimento Balanceado", 1000, 0, "./images/jaspeadulto.png"))
-productoA.push(new Producto("Jaspe Cachorro", "Alimento Balanceado", 1000, 0, "./images/jaspecachorro.jpg"))
-productoA.push(new Producto("Dog-Chow Adulto", "Alimento Balanceado", 1000, 0, "./images/dogchowadulto.png "))
-productoA.push(new Producto("Dog-Chow Cachorro", "Alimento Balanceado", 1000, 0, "./images/dogchowcachorro.png"))
-productoA.push(new Producto("Dogui", "Alimento Balanceado", 1000, 0, "./images/dogui.png "))
+productoA.push(new Producto("Dog-Chow Adulto", "Alimento Balanceado", 1000, 0, "./images/dogchowadulto.png"))
+productoA.push(new Producto("Dogui", "Alimento Balanceado", 1000, 0, "./images/dogui.png"))
 productoA.push(new Producto("Econocan", "Alimento Balanceado", 1000, 0, "./images/econocan.png"))
-productoA.push(new Producto("Pedigree Adulto", "Alimento Balanceado", 1000, 0, "./images/pedigreeadulto.png "))
+productoA.push(new Producto("Pedigree Adulto", "Alimento Balanceado", 1000, 0, "./images/pedigreeadulto.png"))
+productoA.push(new Producto("Sabrositos Adulto", "Alimento Balanceado", 1000, 0, "./images/sabrositosadulto.png"))
+productoA.push(new Producto("Jaspe Adulto", "Alimento Balanceado", 1000, 0, "./images/jaspeadulto.png"))
+productoA.push(new Producto("Walt-Can Cachorro", "Alimento Balanceado", 1000, 0, "./images/waltcancachorro.png"))
+productoA.push(new Producto("Jaspe Cachorro", "Alimento Balanceado", 1000, 0, "./images/jaspecachorro.jpg"))
+productoA.push(new Producto("Dog-Chow Cachorro", "Alimento Balanceado", 1000, 0, "./images/dogchowcachorro.png"))
 productoA.push(new Producto("Sabrositos Cachorro", "Alimento Balanceado", 1000, 0, "./images/sabrositoscachorr.png"))
-productoA.push(new Producto("Sabrositos Adulto", "Alimento Balanceado", 1000, 0, "./images/sabrositosadulto.png "))
 
 const card = document.getElementById("cardDinamica");
-
-
 for (let array of productoA) {
     const productoL = document.createElement("div");
     productoL.innerHTML += `
-    
         <div class="card mb-3" style="width: 18rem;">
-          <div class="container card-body  ">
+          <div class="container card-body">
             <img class="imgArray card-img-top" src="${array.img}" >
-            <h3> ${ array.nombre } </h3>
+            <h3> ${ array.nombre} </h3>
             <p class="card-text">$${array.precio}</p>
-            <button class="btn btn-warning rounded-pill text-secondary" >Agregar al carrito</button>
+            <button class="btn btn-warning rounded-pill text-secondary">Agregar al carrito</button>
             </div>
-           
-        </div>`
+         </div>`
     card.appendChild(productoL);
 }
 
@@ -55,3 +51,13 @@ textoBotonUno.innerHTML = "Inicio";
 let textoBotonDos = document.getElementById("botonDos");
 console.log(textoBotonDos.innerHTML);
 textoBotonDos.innerHTML = "Tienda";
+
+let titulo = document.getElementById("titulo");
+titulo.style.font = "bold  50px Source Serif"
+
+
+
+let fondoFooter = document.getElementById("newsletter");
+fondoFooter.style.background = "black";
+fondoFooter.style.color = "white";
+console.log(fondoMenu.innerHTML);
