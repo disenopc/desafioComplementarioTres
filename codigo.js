@@ -61,3 +61,18 @@ let fondoFooter = document.getElementById("newsletter");
 fondoFooter.style.background = "black";
 fondoFooter.style.color = "white";
 console.log(fondoMenu.innerHTML);
+
+const pedido = [];
+
+for (let i = 0; i < 2; i++) {
+    pedido.push(prompt("Ingresar productos"));
+}
+
+let ul = document.createElement("ul");
+let inner = "";
+for (const lista of pedido) {
+    inner += `<li>${lista}</li>`;
+}
+
+ul.innerHTML = inner;
+document.body.appendChild(ul);
