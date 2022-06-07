@@ -65,7 +65,7 @@ console.log(fondoMenu.innerHTML);
 const pedido = [];
 
 for (let i = 0; i < 2; i++) {
-    pedido.push(prompt("Ingresar productos"));
+    pedido.push(prompt("Ingresar productos al carrito \n (En el caso de no ingresar un producto podrá visualizar el catalogo completo)"));
 }
 
 let ul = document.createElement("ul");
